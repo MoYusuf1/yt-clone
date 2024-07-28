@@ -11,14 +11,17 @@ const TopNavigation = () => {
                 <span className="hover:bg-background-dark/30 md:block hidden hover:text-white cursor-pointer rounded-full p-2 mr-1">
                 <Menu size={30}/>
                 </span>
-
                 <Link href="/" className="flex items-center space-x-2">
                 <Contrast size={48} className="text-green"/>
                 <span className="hidden md:block text-2xl font-bold">MyTube</span>
-                </Link>
-
+                </Link> 
             </div>
 
+            <div className="md:flex items-center justify-center hidden">
+                <form onSubmit={} className="flex items-center h-10 mx-auto">
+                    
+                </form>
+            </div> 
         </div>
     </nav>
   );
