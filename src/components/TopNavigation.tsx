@@ -11,7 +11,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@radix-ui/react-dropdown-menu";
+} from "@/components/ui/DropdownMenu";
 import { Avatar, AvatarImage } from "@/components/ui/Avatar";
 import { AvatarFallback } from "@radix-ui/react-avatar";
 
@@ -91,16 +91,16 @@ const TopNavigation = () => {
           <div className="py-5 hidden md:block">
             <DropdownMenu>
               <DropdownMenuTrigger className="focus:outline-none">
-                <Avatar className="pt-2">
-                  <AvatarImage src="public/pfp.jpg" alt="Mohamed Yusuf" />
+                <Avatar>
+                  <AvatarImage src="https://github.com/shadcn.png" alt="Mohamed Yusuf" />
                   <AvatarFallback>MY</AvatarFallback>
                 </Avatar>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-72 bg-opacity-100">
+              <DropdownMenuContent className="w-72">
                 <DropdownMenuLabel>
                   <div className="flex space-x-4">
-                    <Avatar className="pl-2">
-                      <AvatarImage src="public/pfp.jpg" alt="Mohamed Yusuf" />
+                    <Avatar>
+                      <AvatarImage src="https://github.com/shadcn.png" alt="Mohamed Yusuf" />
                       <AvatarFallback>MY</AvatarFallback>
                     </Avatar>
 
