@@ -36,7 +36,7 @@ const TopNavigation = () => {
           </span>
           <Link href="/" className="flex items-center space-x-2">
             <Contrast size={48} className="text-green" />
-            <span className="hidden md:block text-2xl font-bold">MyTube</span>
+            <span className="hidden md:block text-2xl font-bold">MYtube</span>
           </Link>
         </div>
 
