@@ -7,7 +7,7 @@ import TopNavigation from "@/components/TopNavigation";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "MYtube",
+  title: "MyTube",
   description: "Youtube Clone",
 };
 

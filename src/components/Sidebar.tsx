@@ -27,7 +27,7 @@ const Sidebar = ({ className }: Props) => {
       <div className='px-5 flex items-center'>
         <Link href='/' className='flex items-center space-x-2'>
           <Contrast size={48} className='text-white' />
-          <span className='text-2xl font-black'>MYtube</span>
+          <span className='text-2xl font-black'>MyTube</span>
         </Link>
       </div>
       <div className='space-y-4 py-4'>
