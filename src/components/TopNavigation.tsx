@@ -55,7 +55,6 @@ const TopNavigation = () => {
             className="flex items-center h-10 mx-auto"
           >
             <input
-              onInput={printSearch}
               type="search"
               placeholder="Search"
               ref={searchInputRef}
@@ -82,10 +81,11 @@ const TopNavigation = () => {
               <DialogTitle title="Search Anything">
               <DialogContent>
                 <form
-                  onSubmit={handleSubmit}
+                  onSubmit={(values) => {handleSubmit(values), printSearch()}}
                   className="flex items-center h-10 mx-auto"
                 >
                   <input
+                    onSubmit={printSearch}
                     type="search"
                     placeholder="Search"
                     ref={searchInputRef}
