@@ -51,7 +51,7 @@ const TopNavigation = () => {
 
         <div className="md:flex items-center justify-center hidden">
           <form
-            onSubmit={handleSubmit}
+            onSubmit={(values) => {handleSubmit(values), printSearch()}}
             className="flex items-center h-10 mx-auto"
           >
             <input
