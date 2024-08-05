@@ -1,18 +1,18 @@
+import { ScrollArea } from '@/components/ui/ScrollArea';
 import { cn } from '@/lib/utils';
 import {
   Clock4,
   Compass,
+  Contrast,
   History,
   Home,
   MonitorPlay,
   Tv2,
   UserCircle,
-  Contrast,
 } from 'lucide-react';
 import Link from 'next/link';
-import { ScrollArea } from '@/components/ui/ScrollArea';
-import { Separator } from '@radix-ui/react-dropdown-menu';
 import { Button } from '@/components/ui/Button';
+import { Separator } from '@/components/ui/Separator';
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -27,7 +27,7 @@ const Sidebar = ({ className }: Props) => {
       <div className='px-5 flex items-center'>
         <Link href='/' className='flex items-center space-x-2'>
           <Contrast size={48} className='text-white' />
-          <span className='text-2xl font-black'>MyTube</span>
+          <span className='text-2xl font-black'>MYTube</span>
         </Link>
       </div>
       <div className='space-y-4 py-4'>
