@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/DropdownMenu";
 import { Avatar, AvatarImage } from "@/components/ui/Avatar";
 import { AvatarFallback } from "@radix-ui/react-avatar";
+import { DialogTitle } from "@radix-ui/react-dialog";
 
 const TopNavigation = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -23,20 +24,28 @@ const TopNavigation = () => {
     event.preventDefault();
   };
 
-  if (searchInputRef.current) {
-    console.log(searchInputRef.current.value);
+  function printSearch(){
+      if(searchInputRef.current){
+        console.log(searchInputRef.current.value);
+      } 
   }
+
 
   return (
     <nav className="fixed top-0 left-0 w-screen z-20 dark:bg-black bg-white">
       <div className="flex justify-between items-center px-2 md:px-7 h-16">
         <div className="flex items-center">
           <span className="hover:bg-background-dark/30 hover:text-white cursor-pointer rounded-full p-2 mr-1">
-            <Menu size={30} className="text-black dark:text-white"/>
+            <Menu
+              size={30}
+              className="text-black dark:text-white md:flex hidden"
+            />
           </span>
           <Link href="/" className="flex items-center space-x-2">
             <Contrast size={48} className="text-black dark:text-white" />
-            <span className="hidden md:block text-2xl font-bold text-black dark:text-white">MYtube</span>
+            <span className="hidden md:block text-2xl font-bold text-black dark:text-white">
+              MYtube
+            </span>
           </Link>
         </div>
 
@@ -46,6 +55,7 @@ const TopNavigation = () => {
             className="flex items-center h-10 mx-auto"
           >
             <input
+              onInput={printSearch}
               type="search"
               placeholder="Search"
               ref={searchInputRef}
@@ -69,6 +79,7 @@ const TopNavigation = () => {
                 <Search onClick={() => setDialogOpen(true)} />
               </DialogTrigger>
 
+              <DialogTitle title="Search Anything">
               <DialogContent>
                 <form
                   onSubmit={handleSubmit}
@@ -85,6 +96,7 @@ const TopNavigation = () => {
                   </div>
                 </form>
               </DialogContent>
+              </DialogTitle>
             </Dialog>
           </div>
 
@@ -92,7 +104,10 @@ const TopNavigation = () => {
             <DropdownMenu>
               <DropdownMenuTrigger className="focus:outline-none">
                 <Avatar>
-                  <AvatarImage src="https://github.com/shadcn.png" alt="Mohamed Yusuf" />
+                  <AvatarImage
+                    src="https://github.com/shadcn.png"
+                    alt="Mohamed Yusuf"
+                  />
                   <AvatarFallback>MY</AvatarFallback>
                 </Avatar>
               </DropdownMenuTrigger>
@@ -100,7 +115,10 @@ const TopNavigation = () => {
                 <DropdownMenuLabel>
                   <div className="flex space-x-4">
                     <Avatar>
-                      <AvatarImage src="https://github.com/shadcn.png" alt="Mohamed Yusuf" />
+                      <AvatarImage
+                        src="https://github.com/shadcn.png"
+                        alt="Mohamed Yusuf"
+                      />
                       <AvatarFallback>MY</AvatarFallback>
                     </Avatar>
 
@@ -113,12 +131,11 @@ const TopNavigation = () => {
                         </Link>
                       </span>
                     </div>
-
                   </div>
                 </DropdownMenuLabel>
-                <DropdownMenuSeparator/>
+                <DropdownMenuSeparator />
                 <div className="p-2 flex items-center"> </div>
-                    <span className="mr-2"> Appearance: </span> <ThemeToggle/>
+                <span className="mr-2"> Appearance: </span> <ThemeToggle />
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
