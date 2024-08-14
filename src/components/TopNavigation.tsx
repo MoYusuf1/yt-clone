@@ -1,6 +1,6 @@
 "use client";
 
-import { Bell, Contrast, Menu, Search, Video } from "lucide-react";
+import { Bell, Menu, Orbit, Search, Video } from "lucide-react";
 import Link from "next/link";
 import { FormEvent, useRef, useState } from "react";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -42,9 +42,9 @@ const TopNavigation = () => {
             />
           </span>
           <Link href="/" className="flex items-center space-x-2">
-            <Contrast size={48} className="text-black dark:text-white" />
+            <Orbit size={48} className="text-black dark:text-white" />
             <span className="hidden md:block text-2xl font-bold text-black dark:text-white">
-              MYtube
+              Mytube
             </span>
           </Link>
         </div>

@@ -3,11 +3,11 @@ import { cn } from "@/lib/utils";
 import {
   Clock4,
   Compass,
-  Contrast,
   History,
   Home,
   Menu,
   MonitorPlay,
+  Orbit,
   Tv2,
   UserCircle,
 } from "lucide-react";
@@ -30,9 +30,9 @@ const Sidebar = ({ className }: Props) => {
           <Menu size={30} className="text-black dark:text-white" />
         </span>
         <Link href="/" className="flex items-center space-x-2">
-          <Contrast size={48} className="text-black dark:text-white" />
+          <Orbit size={48} className="text-black dark:text-white" />
           <span className="hidden md:block text-2xl font-bold text-black dark:text-white">
-            MYtube
+            Mytube
           </span>
         </Link>
       </div>
