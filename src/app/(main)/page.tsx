@@ -15,7 +15,9 @@ export default function Home() {
   } = useSWR("fetchVideo/${badge}", () => fetchVideos(badge, 9));
 
 
-  console.log(videoResults);
+  if(error){
+    throw new Error("Error fetching video data")
+  }
 
   return (
     <>
