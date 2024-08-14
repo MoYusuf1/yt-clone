@@ -19,7 +19,6 @@ export default function Home() {
   return (
     <>
       <div className="px-2 md:pl-[252px] fixed top-16 py-2 left-0 w-screen dark:bg-black bg-white">
-        Video Results
       </div>
 
       <div className="flex flex-wrap"> 
